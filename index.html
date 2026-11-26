@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <title>Student Marks Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="box" id="formPage">
+
+        <h1>Student Marks Calculator</h1>
+
+        <form id="studentForm">
+
+            <label for="name" class="field-label">Name</label>
+            <input type="text" id="name"
+                   placeholder="Enter student name" required>
+
+            <p class="section-title">Gender</p>
+
+            <div class="options">
+                <label>
+                    <input type="radio" name="gender"
+                           value="Male" required>
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender"
+                           value="Female">
+                    Female
+                </label>
+            </div>
+
+            <p class="section-title">Course</p>
+
+            <div class="options">
+                <label>
+                    <input type="checkbox" name="course"
+                           value="HNDIT">
+                    HNDIT
+                </label>
+
+                <label>
+                    <input type="checkbox" name="course"
+                           value="HNDSE">
+                    HNDSE
+                </label>
+
+                <label>
+                    <input type="checkbox" name="course"
+                           value="HNDJA">
+                    HNDJA
+                </label>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Marks (0–100)</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Machine Learning</td>
+                            <td>
+                                <input type="number" id="mark1"
+                                       min="0" max="100"
+                                       step="1" required>
+                            </td>
+                            <td id="grade1">-</td>
+                        </tr>
+
+                        <tr>
+                            <td>Computer Network</td>
+                            <td>
+                                <input type="number" id="mark2"
+                                       min="0" max="100"
+                                       step="1" required>
+                            </td>
+                            <td id="grade2">-</td>
+                        </tr>
+
+                        <tr>
+                            <td>Architecture</td>
+                            <td>
+                                <input type="number" id="mark3"
+                                       min="0" max="100"
+                                       step="1" required>
+                            </td>
+                            <td id="grade3">-</td>
+                        </tr>
+
+                        <tr class="average-row">
+                            <td colspan="2">Average</td>
+                            <td id="average">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="button-area">
+                <button type="submit">Calculate</button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="box" id="output">
+
+        <h1>Student Marks &amp; Grade Calculator</h1>
+
+        <h2>Student Results</h2>
+
+        <div class="result-details">
+            <p id="resultName"></p>
+            <p id="resultGender"></p>
+            <p id="resultCourse"></p>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Marks (0–100)</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Machine Learning</td>
+                        <td id="resultMark1"></td>
+                        <td id="resultGrade1"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Computer Network</td>
+                        <td id="resultMark2"></td>
+                        <td id="resultGrade2"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Architecture</td>
+                        <td id="resultMark3"></td>
+                        <td id="resultGrade3"></td>
+                    </tr>
+
+                    <tr class="average-row">
+                        <td colspan="2">Average</td>
+                        <td id="resultAverage"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 id="total" style="text-align:center;"></h3>
+
+        <p class="result-message" id="success"></p>
+
+        <div class="button-area">
+            <button type="button" onclick="goBack()">Back</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
